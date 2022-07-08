@@ -22,3 +22,15 @@ Route::get('/', function () {
 Route::get('/input', [InventoryController::class,'index'])->name('input');
 Route::get('/datatable', [InventoryController::class,'data'])->name('datatable');
 Route::post('/insert', [InventoryController::class,'insert'])->name('insert');
+// edit
+Route::get('/edit/{id}', [InventoryController::class, 'edit'])->name('edit');
+Route::post('/update/{id}', [InventoryController::class, 'update'])->name('update');
+
+// delete
+Route::get('/delete/{id}', [InventoryController::class, 'delete'])->name('delete');
+// Route::get('/delete/{id}', [InventoryController::class, 'delete'])->name('delete');
+
+//details
+Route::get('/details/{id}', [InventoryController::class, 'details'])->name('details');
+
+// Route::get('', [InventoryController::class, ''])->name('');

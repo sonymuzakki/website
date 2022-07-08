@@ -149,7 +149,7 @@
                             <label for="exampleInputEmail" class="form-label">Hostname</label>
                             <input type="text" name="hostname" class="form-control" id="exampleFormControlInput1" placeholder="">
                         </div>
-                        <div class="">
+                        <div class="mb-3">
                             <label  for="ExampleInputEmail" class="form-label">Jenis</label>
                             <select class="form-control" name="jenis" aria-label="Default Select example">
                               <option>Select Option ..</option>

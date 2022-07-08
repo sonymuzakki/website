@@ -6,17 +6,7 @@
       <div class="section-header">
         <h1>Data Table</h1>
       </div>
-      <div class="card">
-        <div class="input-group">
-            <div class="form-outline">
-              <label class="form-label" for="form1">Search</label>
-              <input id="search-focus" type="search" id="form1" class="form-control" />
-            </div>
-            <button type="button-sm" class="btn btn-primary">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-      </div>
+
       <section class="Form">
         <div class="card">
             <form action="/insert" method="POST" enctype="multipart/form-data">
@@ -24,7 +14,7 @@
 
             <div class="table-responsive">
             <table class="table table-striped">
-                <a href="/input" class="btn btn-dark mb-2">Tambah Data</a>
+                <a href="/input" class="btn btn-primary mb-2">Tambah Data</a>
 
             <thead>
             @if ( $message = Session::get('success' ))
@@ -63,12 +53,14 @@
                 <td>{{$row->ssd}}</td>
                 <td>{{$row->os}}</td>
                 <td>
-                    <a href="" class="btn btn-primary btn-sm">Details</a>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/details/ {{ $row->id }}" type="button" class="btn btn-primary"><i class="fa-solid fa-info"></i></a>
+                    </div>
                 </td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-trash"></i></button>
+                        <a href="/edit/ {{ $row->id }}" type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="/delete/ {{ $row->id }}" type="button" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
                       </div>
                 </td>
 
@@ -102,3 +94,7 @@
     </section>
 
 @endsection
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
