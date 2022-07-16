@@ -14,7 +14,7 @@
 
             <div class="table-responsive">
             <table class="table table-striped">
-                <a href="/input" class="btn btn-primary mb-2">Tambah Data</a>
+                <a href="/input"  class="btn btn-primary mb-2"><i class="fa-solid fa-plus"></i> Tambah Data</a>
 
             <thead>
             @if ( $message = Session::get('success' ))

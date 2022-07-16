@@ -76,6 +76,11 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fal,
 a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
   margin-left: 4px; }
 
+/*
+.bg-login {
+    ba
+} */
+
 .bg-primary {
   background-color: #6777ef !important; }
 
@@ -2006,10 +2011,20 @@ a.bb {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #666;
-  text-align: center; }
+  /* color: #666; */
+  text-align: center;
+  background: url("/public/assets/img/bg.jpg") no-repeat center center fixed;
+background-size: cover; }
 
-.font-weight-600 {
+  .body-login {
+        background: url(/public/assets/img/bg.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+  .font-weight-600 {
   font-weight: 600 !important; }
 
 .budget-price {
@@ -2980,3 +2995,18 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   100% {
     -webkit-transform: scale(1.2, 1.2);
     opacity: 0.0; } }
+body {
+        background: url("asset/img/bg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+       }
+       /*memberi style pada class panel default*/
+       .panel-default {
+        opacity: 0.9;
+        margin-top:180px;
+       }
+       .form-group.last {
+        margin-bottom:0px;
+}

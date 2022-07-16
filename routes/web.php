@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/index', function () {
+    return view('index');
+});
 
 Route::get('/input', [InventoryController::class,'index'])->name('input');
 Route::get('/datatable', [InventoryController::class,'data'])->name('datatable');
@@ -32,5 +35,9 @@ Route::get('/delete/{id}', [InventoryController::class, 'delete'])->name('delete
 
 //details
 Route::get('/details/{id}', [InventoryController::class, 'details'])->name('details');
+// Login
+Route::get('/login', [InventoryController::class, 'login'])->name('login');
+// Register
+Route::get('/register', [InventoryController::class, 'register'])->name('register');
 
 // Route::get('', [InventoryController::class, ''])->name('');

@@ -52,4 +52,14 @@ class InventoryController extends Controller
         return view ('details',compact ('data'));
     }
 
+    public function login (){
+
+        return view('login.login');
+    }
+
+    public function register (){
+
+        return view('login.register');
+    }
+
 }
