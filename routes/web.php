@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\LoginController;
 use App\Models\Inventory;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('welcome');
 });
 Route::get('/index', function () {
@@ -36,8 +37,10 @@ Route::get('/delete/{id}', [InventoryController::class, 'delete'])->name('delete
 //details
 Route::get('/details/{id}', [InventoryController::class, 'details'])->name('details');
 // Login
-Route::get('/login', [InventoryController::class, 'login'])->name('login');
+Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
 // Register
-Route::get('/register', [InventoryController::class, 'register'])->name('register');
+Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
 
 // Route::get('', [InventoryController::class, ''])->name('');

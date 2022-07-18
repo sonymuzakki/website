@@ -2012,9 +2012,7 @@ a.bb {
   text-transform: uppercase;
   letter-spacing: 4px;
   /* color: #666; */
-  text-align: center;
-  background: url("/public/assets/img/bg.jpg") no-repeat center center fixed;
-background-size: cover; }
+  text-align: center; }
 
   .body-login {
         background: url(/public/assets/img/bg.jpg) no-repeat center center fixed;
