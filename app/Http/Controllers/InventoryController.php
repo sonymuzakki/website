@@ -14,7 +14,7 @@ class InventoryController extends Controller
     }
 
     public function data(){
-        $data = Inventory::all();
+        $data = Inventory::paginate(5);
         // dd($data);
         return view('datatable', compact('data'));
     }

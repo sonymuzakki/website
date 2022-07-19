@@ -70,22 +70,21 @@
 
                         </tbody>
                     </table>
-                    <nav aria-label="...">
-                        <ul class="pagination">
-                          <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1"><<</a>
-                          </li>
-                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item ">
-                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">>></a>
-                          </li>
-                        </ul>
-                      </nav>
+
+
                 </div>
+            </div>
+            <div>
+                Showing
+                {{ $data->firstItem() }}
+                to
+                {{ $data->lastItem() }}
+                of
+                {{ $data->total() }}
+                entries
+            </div>
+            <div class="content-justify-end">
+                {{ $data->links() }}
             </div>
         </div>
 
