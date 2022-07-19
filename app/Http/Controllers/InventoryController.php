@@ -23,7 +23,7 @@ class InventoryController extends Controller
 
         // dd($request->all());
         Inventory::create($request->all());
-        return redirect()->route('datatable')->with('success','Data Berhasil di ditambahkan');
+        return redirect()->route('datatable')->with('toast_success', 'Data Berhasil Disimpan!');
     }
 
     public function edit($id){
@@ -52,6 +52,6 @@ class InventoryController extends Controller
         return view ('details',compact ('data'));
     }
 
-    
+
 
 }

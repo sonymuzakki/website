@@ -15,7 +15,7 @@
             <div class="d-sm-none d-lg-inline-block">Hi,Admin</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item has-icon text-danger">
+              <a href="/logout" class="dropdown-item has-icon text-danger">
                 <i class="fas fa-sign-out-alt"></i> Logout
               </a>
             </div>
@@ -25,15 +25,15 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="/">TINVES</a>
+            <a href="/dashboard">TINVES</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="/">TS</a>
+            <a href="/dashboard">TS</a>
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
               <li class="">
-                <a href="/" class=""><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="/dashboard" class=""><i class="fas fa-fire"></i><span>Dashboard</span></a>
               </li>
               <li class="menu-header">Starter</li>
               <li class="nav-item dropdown">
@@ -41,11 +41,13 @@
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="/input">Form Input</a></li>
                   {{--  {{--  <li><a class="nav-link" href="layout-transparent.html"></a></li>  --}}
-                  <li><a class="nav-link" href="datatable">Data Table</a></li>
+                  <li><a class="nav-link" href="datatable">Data Inventaris</a></li>
                 </ul>
               </li>
-              <li class=""><a class="nav-link" href="/"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
-
+              <li class=""><a class="nav-link" href="#"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
+              <div class="info">
+                {{--  <a href="#" class="d-block">{{ Auth::user()->name }}</a>  --}}
+              </div>
         </aside>
       </div>
 

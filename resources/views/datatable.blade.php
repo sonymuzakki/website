@@ -4,7 +4,7 @@
 <div class="main-content">
     <section class="section">
       <div class="section-header">
-        <h1>Data Table</h1>
+        <h1>Data Inventaris</h1>
       </div>
 
       <section class="Form">

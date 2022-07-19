@@ -16,9 +16,12 @@ class LoginController extends Controller
     }
 
     public function loginproses(Request $request){
+        // dd($request->all());
         if(Auth::attempt($request->only('email','password'))){
-            return redirect('/dashboard');
+            return redirect('dashboard');
         }
+
+        return redirect('/')->with('success','Data Berhasil di ditambahkan');
     }
 
     public function register (Request $request){
@@ -28,12 +31,19 @@ class LoginController extends Controller
 
     public function registeruser (Request $request){
         User::create([
-            'name' => $request->nama,
+            'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'remember_token' => Str::random(60),
         ]);
 
         return redirect('/');
+    }
+
+    public function logout(){
+        Auth::logout();
+
+        return redirect('/');
+
     }
 }

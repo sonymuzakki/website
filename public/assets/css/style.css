@@ -2006,21 +2006,17 @@ a.bb {
   content: '/'; }
 
 .login-brand {
-  margin: 20px 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 5%;
+  margin: auto;
   margin-bottom: 40px;
   font-size: 24px;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   /* color: #666; */
   text-align: center; }
 
-  .body-login {
-        background: url(/public/assets/img/bg.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
 
   .font-weight-600 {
   font-weight: 600 !important; }

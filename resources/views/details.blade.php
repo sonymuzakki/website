@@ -14,6 +14,7 @@
                     <div class="card-body">
                         <form action="/details/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
+
                         <div class="mb-3">
                             <label for="exampleInputEmail" class="form-label">Hostname</label>
                             <input type="text" name="hostname"  class="form-control" id="exampleFormControlInput1" placeholder="" value="{{ $data->hostname }}" disabled>

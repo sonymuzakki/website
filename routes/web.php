@@ -16,15 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard', function () {
-    return view('welcome');
-});
+Route::get('/dashboard', function () { return view('welcome');})->middleware('auth');
 Route::get('/index', function () {
     return view('index');
 });
 
-Route::get('/input', [InventoryController::class,'index'])->name('input');
-Route::get('/datatable', [InventoryController::class,'data'])->name('datatable');
+Route::get('/input', [InventoryController::class,'index'])->name('input')->middleware('auth');
+Route::get('/datatable', [InventoryController::class,'data'])->name('datatable')->middleware('auth');
 Route::post('/insert', [InventoryController::class,'insert'])->name('insert');
 // edit
 Route::get('/edit/{id}', [InventoryController::class, 'edit'])->name('edit');
@@ -42,5 +40,6 @@ Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('logi
 // Register
 Route::get('/register', [LoginController::class, 'register'])->name('register');
 Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
-
+// Logout
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 // Route::get('', [InventoryController::class, ''])->name('');
