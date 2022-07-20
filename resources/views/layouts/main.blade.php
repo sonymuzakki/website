@@ -7,7 +7,7 @@
           </ul>
 
         </form>
-        <ul class="navbar-nav navbar-right">
+        <ul class="navbar-nav navbar-right container">
           <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" </a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
             <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
@@ -24,27 +24,29 @@
       </nav>
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
-          <div class="sidebar-brand">
-            <a href="/dashboard">TINVES</a>
-          </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="/dashboard">TS</a>
+                <a href="#">TS</a>
           </div>
+          <div class="sidebar-brand">
+            <a href="#">TINVES</a>
+          </div>
+
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
               <li class="">
-                <a href="/dashboard" class=""><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="dashboard" class=""><i class="fas fa-fire"></i><span>Dashboard</span></a>
               </li>
-              <li class="menu-header">Starter</li>
+              <li class="menu-header"></li>
               <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Layout</span></a>
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Administrator</span></a>
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="/input">Form Input</a></li>
                   {{--  {{--  <li><a class="nav-link" href="layout-transparent.html"></a></li>  --}}
                   <li><a class="nav-link" href="datatable">Data Inventaris</a></li>
+                  <li><a class="nav-link" href="user">Data Users</a></li>
                 </ul>
               </li>
-              <li class=""><a class="nav-link" href="#"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
+              <li class=""><a class="nav-link" href="#"><i class="fa-thin fa-users"></i> <span>Users</span></a></li>
               <div class="info">
                 {{--  <a href="#" class="d-block">{{ Auth::user()->name }}</a>  --}}
               </div>

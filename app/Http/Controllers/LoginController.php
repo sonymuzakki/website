@@ -21,7 +21,7 @@ class LoginController extends Controller
             return redirect('dashboard');
         }
 
-        return redirect('/')->with('success','Data Berhasil di ditambahkan');
+        return redirect('dashboard')->with('success','Data Berhasil di ditambahkan');
     }
 
     public function register (Request $request){

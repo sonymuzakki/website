@@ -88,16 +88,21 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="agree" class="custom-control-input" id="agree">
-                      <label class="custom-control-label" for="agree">I agree with the terms and conditions</label>
-                    </div>
+
                   </div>
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="agree" class="custom-control-input" id="agree">
+                        <label class="custom-control-label" for="agree">I agree with the terms and conditions</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block mt-1">
                       Register
-                    </button>
+                        </button>
+                    <div class="text-center mt-3 "> <a href="/">Back to Login</a></div>
+                    {{--  <button type="button" class="btn btn-success btn-lg">Login<a href="/"></a>
+
+                    </button>  --}}
                   </div>
                 </form>
 
@@ -126,6 +131,6 @@
    <script src="../assets/js/scripts.js"></script>
   <script src="../assets/js/custom.js"></script>
 
-   Page Specific JS File
+   {{--  Page Specific JS File  --}}
  </body>
 </html>

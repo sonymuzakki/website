@@ -1,5 +1,9 @@
 @extends('welcome')
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
 @section('container')
 <div class="main-content">
     <section class="section">
@@ -17,13 +21,15 @@
                 <a href="/input"  class="btn btn-primary mb-2"><i class="fa-solid fa-plus"></i> Tambah Data</a>
 
             <thead>
-            @if ( $message = Session::get('success' ))
+            {{--  @if ( $message = Session::get('success' ))
                 <div class="alert alert-success" role="alert">
                     {{ $message }}
                 </div>
-            @endif
+            @endif  --}}
             <th scope="col" class="position col-sm-1">No</th>
                 <th scope="col">Pengguna</th>
+                {{--  <th scope="col">Lokasi</th>
+                <th scope="col">Divisi</th>  --}}
                 <th scope="col">Jenis</th>
                 <th scope="col">Merk</th>
                 <th scope="col">Processor</th>
@@ -40,10 +46,12 @@
                 @php
                     $no = 1;
                 @endphp
-                @foreach ($data as $row)
+                @foreach ($data as $key => $row)
                 <tr>
-                <th scope="row">{{$no++}} </th>
+                <th scope="row">{{ $data->firstItem() + $key }} </th>
                 <td>{{$row->hostname}}</td>
+                {{--  <td>{{  }}</td>
+                <td>{{  }}</td>  --}}
                 <td>{{$row->jenis}}</td>
                 <td>{{$row->merk}}</td>
                 <td>{{$row->processor}}</td>
@@ -66,34 +74,25 @@
 
             </tr>
             @endforeach
-
-
-                        </tbody>
+            </tbody>
                     </table>
-
-
+                    <div class="">
+                        Showing
+                        {{ $data->firstItem() }}
+                        to
+                        {{ $data->lastItem() }}
+                        of
+                        {{ $data->total() }}
+                        entries
+                    </div>
+                    <div class="pull-right">
+                        {{ $data->links() }}
+                    </div>
                 </div>
             </div>
-            <div>
-                Showing
-                {{ $data->firstItem() }}
-                to
-                {{ $data->lastItem() }}
-                of
-                {{ $data->total() }}
-                entries
-            </div>
-            <div class="content-justify-end">
-                {{ $data->links() }}
-            </div>
         </div>
-
-    <div class="section-body">
-      </div>
+        @include('sweetalert::alert')
     </section>
 
 @endsection
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>

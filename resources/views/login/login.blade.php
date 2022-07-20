@@ -112,4 +112,5 @@
 
   <!-- Page Specific JS File -->
 </body>
+@include('sweetalert::alert')
 </html>
