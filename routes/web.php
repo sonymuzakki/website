@@ -24,6 +24,9 @@ Route::get('#', function () { return view('welcome');})->middleware('auth');
 Route::get('/index', function () {
     return view('index');
 });
+Route::get('/tes', function () {
+    return view('tes');
+});
 
 Route::get('/dashboard', function () {
     return view('dashbord');
